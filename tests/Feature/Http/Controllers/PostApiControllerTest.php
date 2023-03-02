@@ -43,6 +43,12 @@ test('api.posts.show is successful', function () {
     ]);
 });
 
+test('api.posts.show throws 404 when post does not exist', function () {
+    $response = $this->get('/api/posts/999');
+
+    $response->assertStatus(404);
+});
+
 test('api.posts.store is successful', function () {
     $response = $this->post('/api/posts', [
         'title' => 'Test Title',

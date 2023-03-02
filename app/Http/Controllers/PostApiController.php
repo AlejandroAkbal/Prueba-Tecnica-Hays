@@ -104,6 +104,12 @@ class PostApiController extends Controller
     {
         $postResponse = Http::get('https://jsonplaceholder.typicode.com/posts/' . $id);
 
+        if ($postResponse->status() === 404) {
+            return response()->json([
+                'message' => 'Post not found',
+            ], 404);
+        }
+
         $postResource = new PostResource($postResponse->collect());
 
         return $postResource->response();
