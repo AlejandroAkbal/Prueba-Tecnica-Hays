@@ -7,6 +7,8 @@ el [PDF que me enviaron](public/Prueba%20técnica%20-%20Senior%20PHP%20Symfony-L
 
 ## Descripción
 
+### Tecnologías
+
 El proyecto se ha desarrollado con Laravel 10 y PHP 8.2, usando Composer.
 La base de datos es MySQL 8.0.
 
@@ -14,10 +16,17 @@ Los tests se han desarrollado con PHPUnit y Pest.
 
 El frontend y assets se procesan con Vite.
 
+### Librerias
+
 Como librerias externas se han usado:
 
 - TailwindCSS
 - AlpineJS
+- Laravel Pint (custom PHP CS Fixer)
+
+> Para usar pint: `sail ./vendor/bin/pint`
+
+### API
 
 Se ofrece documentation de la API con la specification OpenAPI usando el
 comando `./vendor/bin/sail artisan l5-swagger:generate`
