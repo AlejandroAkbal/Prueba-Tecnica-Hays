@@ -1,21 +1,24 @@
 <x-guest-layout>
     <main>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden sm:rounded-lg">
 
-                <div class="p-6 bg-white border-b border-gray-200">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl">
+
+                <div class="bg-white px-4 py-2 shadow-xl rounded-lg">
                     <h1 class="text-3xl font-bold">Posts</h1>
 
                     <ul class="mt-4 space-y-4">
                         @foreach ($posts as $post)
 
-                            <li>
+                            <li class="w-full overflow-hidden">
                                 <a href="{{ route('posts.show', $post['id']) }}"
                                    class="text-xl font-semibold capitalize">
-                                    {{ $post['title'] }}
+                                    <h2>
+                                        {{ $post['title'] }}
+                                    </h2>
                                 </a>
 
-                                <p class="text-gray-600 max-h-6 overflow-hidden truncate">{{ $post['body'] }}</p>
+                                <p class="text-gray-600 line-clamp-1">{{ $post['body'] }}</p>
                             </li>
                         @endforeach
                     </ul>
