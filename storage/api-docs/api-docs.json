@@ -1,0 +1,92 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel API Documentation",
+        "description": "Laravel API Documentation",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/posts": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Get all posts",
+                "description": "Get all posts",
+                "operationId": "posts.index",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Create a post",
+                "description": "Create a post",
+                "operationId": "posts.store",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "title": {
+                                        "type": "string",
+                                        "example": "Test Title"
+                                    },
+                                    "body": {
+                                        "type": "string",
+                                        "example": "Test Body"
+                                    },
+                                    "user_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/posts/{id}": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Get a post",
+                "description": "Get a post",
+                "operationId": "posts.show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Post ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    }
+}
