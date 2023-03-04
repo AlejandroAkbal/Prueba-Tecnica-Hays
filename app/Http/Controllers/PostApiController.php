@@ -24,6 +24,7 @@ class PostApiController extends Controller
      *     summary="Get all posts",
      *     description="Get all posts",
      *     operationId="posts.index",
+     *
      *     @OA\Response(
      *      response=200,
      *      description="Success",
@@ -46,9 +47,12 @@ class PostApiController extends Controller
      *     summary="Create a post",
      *     description="Create a post",
      *     operationId="posts.store",
+     *
      *     @OA\RequestBody(
      *         required=true,
+     *
      *         @OA\JsonContent(
+     *
      *             @OA\Property(
      *                 property="title",
      *                 type="string",
@@ -60,12 +64,13 @@ class PostApiController extends Controller
      *                 example="Test Body",
      *             ),
      *             @OA\Property(
-     *               operty="user_id",
+     *                 property="user_id",
      *                 type="integer",
      *                 example=1,
      *             ),
      *         ),
      *     ),
+     *
      *     @OA\Response(
      *      response=201,
      *      description="Success",
@@ -94,16 +99,19 @@ class PostApiController extends Controller
      *     summary="Get a post",
      *     description="Get a post",
      *     operationId="posts.show",
+     *
      *     @OA\Parameter(
      *         name="id",
      *         in="path",
      *         description="Post ID",
      *         required=true,
+     *
      *         @OA\Schema(
      *             type="integer",
      *             format="int64",
      *         ),
      *     ),
+     *
      *     @OA\Response(
      *      response=200,
      *      description="Success",
@@ -116,7 +124,7 @@ class PostApiController extends Controller
      */
     public function show(int $id): JsonResponse
     {
-        $postResponse = Http::get('https://jsonplaceholder.typicode.com/posts/' . $id);
+        $postResponse = Http::get('https://jsonplaceholder.typicode.com/posts/'.$id);
 
         if ($postResponse->status() === 404) {
             return response()->json([
