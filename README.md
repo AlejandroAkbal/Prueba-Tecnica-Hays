@@ -7,6 +7,10 @@ el [PDF que me enviaron](public/Prueba%20técnica%20-%20Senior%20PHP%20Symfony-L
 
 ## Descripción
 
+### Uso
+
+Visita [/posts](http://localhost/posts) para ver la lista de posts.
+
 ### Tecnologías
 
 El proyecto se ha desarrollado con Laravel 10 y PHP 8.2, usando Composer.
