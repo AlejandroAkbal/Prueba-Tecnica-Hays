@@ -26,6 +26,11 @@ Para ver la documentación, se puede acceder a `/api/documentation` en el navega
 
 ### Problemas encontrados
 
+#### OpenAPI
+
+La libreria que se usa para generar la documentación de la API es bastante escasa en información, por lo que la
+implementación no es muy buena.
+
 ### Soluciones Alternativas
 
 ## Instalación y uso
