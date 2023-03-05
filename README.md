@@ -20,15 +20,16 @@ Los tests se han desarrollado con PHPUnit y Pest.
 
 El frontend y assets se procesan con Vite.
 
+Los git commits se han hecho usando [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
 ### Librerias
 
 Como librerias externas se han usado:
 
 - TailwindCSS
-- AlpineJS
 - Laravel Pint (custom PHP CS Fixer)
 
-> Para usar pint: `sail ./vendor/bin/pint`
+> Para usar pint: `./vendor/bin/sail php ./vendor/bin/pint`
 
 ### API
 
@@ -46,9 +47,15 @@ implementación no es muy buena.
 
 ### Soluciones Alternativas
 
+#### Unit Testing
+
+Se ha usado Pest sobre PHPUnit para los tests, ya que facilita la escritura de tests y experiencia de desarrollo.
+
 ## Instalación y uso
 
 1. Clonar el repositorio
+2. Instalar las dependencias -
+   Usar [estas instrucciones](https://laravel.com/docs/10.x/sail#installing-composer-dependencies-for-existing-projects)
 2. Crear un fichero `.env` a partir del `.env.example`
 3. Usar Laravel Sail para levantar el proyecto - `./vendor/bin/sail up`
 4. Ejecutar los tests - `./vendor/bin/sail artisan test`
