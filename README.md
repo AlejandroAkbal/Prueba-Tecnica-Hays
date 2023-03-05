@@ -1,5 +1,18 @@
 # Prueba técnica para Hays
 
+<div align="center">
+  <img src="public/img/posts.index.jpg" alt="Posts" width="200" />
+  <img src="public/img/posts.show.jpg" alt="Post" width="200" />
+</div>
+
+<div align="center">
+  <img src="public/img/api.posts.index.jpg" alt="API" width="400" />
+</div>
+
+<div align="center">
+  <img src="public/img/tests.jpg" alt="Tests" width="400" />
+</div>
+
 ## Requerimientos
 
 Los requerimientos se pueden leer en
@@ -34,9 +47,9 @@ Como librerias externas se han usado:
 ### API
 
 Se ofrece documentation de la API con la specification OpenAPI usando el
-comando `./vendor/bin/sail artisan l5-swagger:generate`
+comando `./vendor/bin/sail artisan l5-swagger:generate`.
 
-Para ver la documentación, se puede acceder a `/api/documentation` en el navegador.
+Para ver la documentación, se puede acceder a [/api/documentation](http://localhost/api/documentation).
 
 ### Problemas encontrados
 
